@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://hmb2r1cd2x3d"]
+
+[ext_resource type="Shader" path="res://Materials/cel_test.gdshader" id="1_p7qmw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_p7qmw")
+shader_parameter/matColor = Vector3(255, 255, 255)

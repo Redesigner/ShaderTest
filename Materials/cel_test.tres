@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c2w6oyxfwl1rh"]
+
+[ext_resource type="Shader" path="res://Materials/cel_test.gdshader" id="1_254j7"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_254j7")
+shader_parameter/matColor = Vector3(228, 195, 184)
+shader_parameter/fresnelBias = 1.0
+shader_parameter/fresnelScale = 1.0
+shader_parameter/fresnelPower = null

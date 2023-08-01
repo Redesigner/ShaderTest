@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://h5sfjoovqu41"]
+
+[ext_resource type="PackedScene" uid="uid://bfngbua86s5tg" path="res://Meshes/Marle-Simple.blend" id="1_ctfmp"]
+[ext_resource type="Shader" path="res://Materials/cel_test.gdshader" id="2_wf4jk"]
+[ext_resource type="Material" uid="uid://hmb2r1cd2x3d" path="res://Materials/feather_cel.tres" id="3_bhl0f"]
+[ext_resource type="Material" uid="uid://c2w6oyxfwl1rh" path="res://Materials/cel_test.tres" id="4_6nqom"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y6ueq"]
+render_priority = 0
+shader = ExtResource("2_wf4jk")
+shader_parameter/matColor = Vector3(70, 70, 70)
+shader_parameter/fresnelBias = null
+shader_parameter/fresnelScale = null
+shader_parameter/fresnelPower = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ps60o"]
+render_priority = 0
+shader = ExtResource("2_wf4jk")
+shader_parameter/matColor = Vector3(15, 15, 15)
+shader_parameter/fresnelBias = null
+shader_parameter/fresnelScale = null
+shader_parameter/fresnelPower = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjaey"]
+render_priority = 0
+shader = ExtResource("2_wf4jk")
+shader_parameter/matColor = Vector3(80, 20, 125)
+shader_parameter/fresnelBias = null
+shader_parameter/fresnelScale = null
+shader_parameter/fresnelPower = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgro1"]
+render_priority = 0
+shader = ExtResource("2_wf4jk")
+shader_parameter/matColor = Vector3(10, 10, 10)
+shader_parameter/fresnelBias = null
+shader_parameter/fresnelScale = null
+shader_parameter/fresnelPower = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5270a"]
+render_priority = 0
+shader = ExtResource("2_wf4jk")
+shader_parameter/matColor = Vector3(231, 102, 115)
+shader_parameter/fresnelBias = 0.0
+shader_parameter/fresnelScale = 0.0
+shader_parameter/fresnelPower = 1.355
+
+[node name="Marle-Simple" instance=ExtResource("1_ctfmp")]
+
+[node name="Boots" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_y6ueq")
+
+[node name="Belt" parent="Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_ps60o")
+
+[node name="Cloak" parent="Armature/Skeleton3D" index="2"]
+surface_material_override/0 = SubResource("ShaderMaterial_fjaey")
+
+[node name="Eyes" parent="Armature/Skeleton3D" index="4"]
+surface_material_override/0 = SubResource("ShaderMaterial_tgro1")
+
+[node name="EyeTexture" parent="Armature/Skeleton3D" index="5"]
+visible = false
+
+[node name="Feather" parent="Armature/Skeleton3D" index="6"]
+surface_material_override/0 = ExtResource("3_bhl0f")
+
+[node name="Feather_001" parent="Armature/Skeleton3D" index="7"]
+surface_material_override/0 = ExtResource("3_bhl0f")
+
+[node name="Feather_002" parent="Armature/Skeleton3D" index="8"]
+surface_material_override/0 = ExtResource("3_bhl0f")
+
+[node name="Feather_003" parent="Armature/Skeleton3D" index="9"]
+surface_material_override/0 = ExtResource("3_bhl0f")
+
+[node name="Hair" parent="Armature/Skeleton3D" index="10"]
+surface_material_override/0 = SubResource("ShaderMaterial_5270a")
+
+[node name="Sword" parent="Armature/Skeleton3D" index="12"]
+visible = false
+
+[node name="Head" parent="Armature/Skeleton3D" index="13"]
+material_override = ExtResource("4_6nqom")
+
+[node name="Body" parent="Armature/Skeleton3D" index="14"]
+surface_material_override/0 = ExtResource("4_6nqom")
