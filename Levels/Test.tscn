@@ -46,7 +46,7 @@ current = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_akgvs")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Instructions" type="RichTextLabel" parent="."]
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 366.0
