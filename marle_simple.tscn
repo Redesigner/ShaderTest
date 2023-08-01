@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://h5sfjoovqu41"]
+
+[ext_resource type="PackedScene" uid="uid://bfngbua86s5tg" path="res://Marle-Simple.blend" id="1_r25we"]
+[ext_resource type="Material" uid="uid://c2w6oyxfwl1rh" path="res://cel_test.tres" id="2_n4wso"]
+[ext_resource type="Shader" path="res://cel_test.gdshader" id="2_vxoqy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5270a"]
+render_priority = 0
+shader = ExtResource("2_vxoqy")
+shader_parameter/matColor = Vector3(231, 102, 115)
+
+[node name="Marle-Simple" instance=ExtResource("1_r25we")]
+
+[node name="EyeTexture" parent="Armature/Skeleton3D" index="5"]
+visible = false
+
+[node name="Hair" parent="Armature/Skeleton3D" index="10"]
+surface_material_override/0 = SubResource("ShaderMaterial_5270a")
+
+[node name="Sword" parent="Armature/Skeleton3D" index="12"]
+visible = false
+
+[node name="Head" parent="Armature/Skeleton3D" index="13"]
+material_override = ExtResource("2_n4wso")
+
+[node name="Body" parent="Armature/Skeleton3D" index="14"]
+surface_material_override/0 = ExtResource("2_n4wso")
